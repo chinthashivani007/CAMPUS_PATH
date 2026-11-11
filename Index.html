@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CampusPath - Campus Navigation</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+
+    <header>
+
+        <div class="logo">
+            📍 CampusPath
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#explore">Explore</a>
+            <a href="#map">Campus Map</a>
+            <a href="#about">About</a>
+        </nav>
+
+    </header>
+
+
+    <!-- HOME SCREEN -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h4>STUDENT FRIENDLY CAMPUS NAVIGATION</h4>
+
+            <h1>
+                Find Your Way<br>
+                Around Campus.
+            </h1>
+
+            <p>
+                Navigate your campus easily.
+                Find classrooms, laboratories,
+                offices and important locations
+                without getting lost.
+            </p>
+
+            <a href="#explore" class="button">
+                Explore Campus →
+            </a>
+
+        </div>
+
+        <div class="hero-image">
+
+            <div class="map-card">
+
+                <h3>🏫 Campus Map</h3>
+
+                <div class="map-box">
+
+                    <div class="building">BLOCK A</div>
+
+                    <div class="building">LIBRARY</div>
+
+                    <div class="building">LAB</div>
+
+                    <div class="building">OFFICE</div>
+
+                    <div class="location-pin">📍</div>
+
+                </div>
+
+                <p>Explore your campus easily</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SEARCH SCREEN -->
+
+    <section class="search-section" id="explore">
+
+        <h2>Where Do You Want To Go?</h2>
+
+        <p>Search for your destination below.</p>
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Enter classroom, laboratory or building name"
+            >
+
+            <button onclick="searchLocation()">
+                Search
+            </button>
+
+        </div>
+
+        <div class="categories">
+
+            <button onclick="filterLocation('Classroom')">
+                📚 Classrooms
+            </button>
+
+            <button onclick="filterLocation('Laboratory')">
+                🔬 Laboratories
+            </button>
+
+            <button onclick="filterLocation('Office')">
+                🏢 Offices
+            </button>
+
+            <button onclick="filterLocation('Facilities')">
+                ⭐ Facilities
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- CAMPUS MAP -->
+
+    <section class="map-section" id="map">
+
+        <h2>Explore Campus Map</h2>
+
+        <p>Select a building to view its information.</p>
+
+        <div class="campus-map">
+
+            <button onclick="showLocation('Academic Block A')">
+                Academic Block A
+            </button>
+
+            <button onclick="showLocation('Science Laboratory')">
+                Science Laboratory
+            </button>
+
+            <button onclick="showLocation('Central Library')">
+                Central Library
+            </button>
+
+            <button onclick="showLocation('Administration Office')">
+                Administration Office
+            </button>
+
+            <button onclick="showLocation('Main Auditorium')">
+                Main Auditorium
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- LOCATION DETAILS -->
+
+    <section class="details-section">
+
+        <h2>Location Details</h2>
+
+        <div class="details-card" id="details">
+
+            <h3>📍 Select Your Destination</h3>
+
+            <p>
+                Search for a location or select
+                a building from the campus map.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- NAVIGATION SCREEN -->
+
+    <section class="navigation-section">
+
+        <h2>Campus Navigation</h2>
+
+        <p>Select your starting point to view directions.</p>
+
+        <select id="startPoint">
+
+            <option value="Main Gate">Main Gate</option>
+
+            <option value="Parking Area">Parking Area</option>
+
+            <option value="Student Centre">Student Centre</option>
+
+            <option value="Academic Block A">Academic Block A</option>
+
+        </select>
+
+        <button onclick="showDirections()">
+            Get Directions →
+        </button>
+
+        <div id="directions"></div>
+
+    </section>
+
+
+    <!-- HOW IT WORKS -->
+
+    <section class="steps-section" id="about">
+
+        <h2>How CampusPath Works</h2>
+
+        <div class="steps">
+
+            <div class="step">
+                <h3>01</h3>
+                <h4>Open Application</h4>
+                <p>Open the CampusPath application.</p>
+            </div>
+
+            <div class="step">
+                <h3>02</h3>
+                <h4>Search Location</h4>
+                <p>Enter the classroom or building name.</p>
+            </div>
+
+            <div class="step">
+                <h3>03</h3>
+                <h4>Find Location</h4>
+                <p>System searches campus information.</p>
+            </div>
+
+            <div class="step">
+                <h3>04</h3>
+                <h4>View Details</h4>
+                <p>View building and floor information.</p>
+            </div>
+
+            <div class="step">
+                <h3>05</h3>
+                <h4>Get Directions</h4>
+                <p>View directions to your destination.</p>
+            </div>
+
+            <div class="step">
+                <h3>06</h3>
+                <h4>Reach Destination</h4>
+                <p>Follow the route to reach your location.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- QR CODE -->
+
+    <section class="qr-section">
+
+        <h2>QR Code Campus Access</h2>
+
+        <p>
+            Students and visitors can scan a QR code
+            at the campus entrance to access the
+            campus navigation system.
+        </p>
+
+        <div class="qr-box">
+            📱
+            <h3>Scan & Explore</h3>
+            <p>QR Access Concept</p>
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h2>📍 CampusPath</h2>
+
+        <p>
+            Student-Friendly Campus Navigation System
+        </p>
+
+        <p>Design Thinking Project</p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
